@@ -1,13 +1,12 @@
 jobs:
     build_app:
         steps:
-            - id: s01
-            run: echo "github ${{github.ref_name}}"
-            run: echo "before " && ls -l
-            - id: s02
-            uses: actions/setup-node
-            with:
-                node-version: 24
-            - id: s03
-            uses: actions/
-            run: echo "after " && ls -l
+    - id: s01
+    run: echo "github ${{github.ref_name}}"
+      - id: s02
+          run: echo "before " && ls -l
+          uses: actions/setup-node@v4
+          with:
+            node-version: 24
+      
+    
